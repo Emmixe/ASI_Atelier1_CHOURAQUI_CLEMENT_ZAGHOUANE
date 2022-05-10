@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<title>HEADER</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+	</head>
+	<body>
+	
+		<div th:fragment="header">
+			<a href="/index"><h1>Bienvenue sur notre site du Jeu</h1></a>
+		
+			<div>
+				<nav>
+					<ul>
+						<li><a href="/getCard"><img th:src="@{../image/randomImage.jpg}" width="10"
+							alt="">Pick random</a></li>
+						<li><a href="/addCard"><img th:src="@{../image/addCard.jpg}" width="10"
+							alt="">Create </a></li>
+						<li><a href="/getAll"><img th:src="@{../image/getAllCard.jpg}" width="10"
+							alt="">List all</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</body>
+</html>

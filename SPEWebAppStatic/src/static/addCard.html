@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <!-- Site Properties -->
+        <title>Grid Example - Semantic</title>
+
+        <link rel="stylesheet" type="text/css" href="../lib/Semantic-UI-CSS-master/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    </head>
+
+    <body>
+        <div class="ui five column grid">
+            <div class="row"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+                <form class="ui form" action="./addData" method="GET" id="addCardForm">
+                    <h3 class="ui dividing header">Add Card Form</h3>
+                    <div class="field">
+                        <label>Name</label>
+                        <input type="text" name="Name" placeholder="Name" id="Name">
+                    </div>
+                    <div class="field">
+                        <label>Description</label>
+                        <input type="text" name="Description" placeholder="Description"id="Description">
+                    </div>
+                    <div class="field">
+                        <label>Image URL</label>
+                        <input type="text" name="Image URL" placeholder="Image URL" id="Image URL">
+                    </div>
+                    <div class="field">
+                        <label>Family</label>
+                        <select name="Family" id="Family">
+                            <option value="Happy Tree Friends">Happy Tree Friends</option>
+                            <option value="Pokémon">Pokémon</option>
+                            <option value="Yu-Gi-Oh">Yu-Gi-Oh</option>
+                          </select>
+                    </div>
+                    <div class="field">
+                        <label>Affinity</label>
+                        <select name="Affinity" id="Affinity">
+                            <option value="Fire">Fire</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Water">Water</option>
+                            <option value="Spectre">Spectre</option>
+                            <option value="Flower">Flower</option>
+                          </select>
+                    </div>
+                    <div class="slidecontainer">
+                        <label>HP</label>
+                        <input name="HP" type="range" min="1" max="100" value="20" class="slider" id="HPRange">
+                    </div>
+                    <div class="slidecontainer">
+                        <label>Energy</label>
+                        <input name="Energy" type="range" min="1" max="100" value="20" class="slider" id="EnergyRange">
+                    </div>
+                    <div class="slidecontainer">
+                        <label>Attack</label>
+                        <input name="Attack" type="range" min="1" max="100" value="20" class="slider" id="AttackRange">
+                    </div>
+                    <div class="slidecontainer">
+                        <label>Defence</label>
+                        <input name="Defence" type="range" min="1" max="100" value="20" class="slider" id="DefenceRange">
+                    </div>
+                    <button class="ui button" type="button">Cancel</button>
+                    <button class="ui button" type="button" style="float: right;" onclick="SendCard()">+ OK</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="./js/addCard.js"></script>

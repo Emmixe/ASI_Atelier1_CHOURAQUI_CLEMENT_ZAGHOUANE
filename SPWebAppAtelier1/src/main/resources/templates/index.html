@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Card creater</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>	
+	<div th:replace="fragments/header :: header">
+		<h1> THIS IS A DEFAULT HEADER</h1>
+	</div>
+
+	<h2 th:utext="${message}">..!..</h2>
+
+	<div>
+		<p th:utext="${messageLocal}">...</p>
+	</div>
+	<div>
+		<nav>
+			<ul>
+				<li><a href="/getCard"><img th:src="@{../image/randomImage.jpg}" width="100"
+					alt="">Affiche une carte aléatoire</a></li>
+				<li><a href="/addCard"><img th:src="@{../image/addCard.jpg}" width="100"
+					alt="">Ajout d'une carte</a></li>
+				<li><a href="/getAll"><img th:src="@{../image/getAllCard.jpg}" width="100"
+					alt="">Liste des cartes créées</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
